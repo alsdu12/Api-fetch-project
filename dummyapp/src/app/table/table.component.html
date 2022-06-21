@@ -9,40 +9,32 @@
 </head>
 
 <body>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Index</th>
-                <th scope="col">Nume</th>
-                <th scope="col">Status</th>
-                <th scope="col">Actiuni</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td><a class="nav-item nav-link"  routerLink="/petdetails">Vizualizare</a>
+    <div *ngIf="router.url != '/editpet' && router.url != '/petdetails' && router.url !='/addpet'">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Nume</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actiuni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data;let i=index">
 
-                    <a class="nav-item nav-link" routerLink="/editpet">Editare</a>
-                    <a class="nav-item nav-link active" href="#">Stergere<span class="sr-only">(current)</span></a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
+                    <td id="{{i+1}}">{{i+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.status}}</td>
+                    <td><a class="btn btn-info" routerLink="/petdetails">Vizualizare</a>
+
+                        <a class="btn btn-warning" routerLink="/editpet">Editare</a>
+                        <a click="deletePet(item.id)" type="button" class="btn btn-danger" href="">Stergere<span class="sr-only">(current)</span></a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

@@ -1,1 +1,47 @@
-<p>editpet works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="titlu">
+        <h1>Modifica Animal</h1>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Nume</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+   
+    <div class="input-group mb-3 layout">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default" type="number" min="0" max="3">ID</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+   
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Status
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Available</a></li>
+          <li><a class="dropdown-item" href="#">Pending</a></li>
+          <li><a class="dropdown-item" href="#">Sold</a></li>
+        </ul>
+      </div>
+ 
+      <div class="add-button"> <button type="button" class="btn btn-primary ">Modifica</button></div>
+</body>
+
+</html>
